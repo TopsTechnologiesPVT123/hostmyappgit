@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="topsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="snm" Type="varchar" MaxLength="50" />
+    <Property Name="marks" Type="int" />
+    <Property Name="gender" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="topsModelStoreContainer">
+    <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

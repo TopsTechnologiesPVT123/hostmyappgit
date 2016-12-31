@@ -1,0 +1,43 @@
+﻿@model HostThis.Models.student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>student</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.sid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.snm)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.snm)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.marks)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.marks)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.gender)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.gender)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id=Model.sid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

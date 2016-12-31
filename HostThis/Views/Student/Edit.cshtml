@@ -1,0 +1,60 @@
+﻿@model HostThis.Models.student
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>student</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sid)
+            @Html.ValidationMessageFor(model => model.sid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.snm)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.snm)
+            @Html.ValidationMessageFor(model => model.snm)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.marks)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.marks)
+            @Html.ValidationMessageFor(model => model.marks)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.gender)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.gender)
+            @Html.ValidationMessageFor(model => model.gender)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
